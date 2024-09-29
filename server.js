@@ -3,6 +3,8 @@ const mongoose = require('./db'); // Import MongoDB connection
 const User = require('./Models/User');   // Correct capitalization
 
 const app = express();  // Initialize the express app
+require('dotenv').config();
+
 
 // Parse incoming request bodies in a middleware
 app.use(express.json()); // Built-in middleware for parsing JSON bodies
@@ -89,5 +91,6 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/users',userRoutes);
 
 
+const port = process.env.PORT || 3000
 
-app.listen(3001)
+app.listen(port)
