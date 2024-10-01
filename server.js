@@ -14,7 +14,7 @@ Without this middleware, req.body will be undefined, which causes the validation
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('Hey! Welcome to my page')
   console.log("hey Hello World");
   
 })
